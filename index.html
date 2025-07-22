@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Quiz</title>
+
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="screen active" id="start-screen">
+            <h1>Quiz Time!</h1>
+            <p>Select a topic:</p>
+            <div id="topic-list">
+                <button class="topicBtn btn btn-success" data-topic="html">HTML</button>
+                <button class="topicBtn btn btn-success" data-topic="css">CSS</button>
+                <button class="topicBtn btn btn-success" data-topic="javascript">JavaScript</button>
+                <button class="topicBtn btn btn-info" data-topic="all">All Topics</button>
+                </div>
+
+            <button class="mainBtn fs-6 mt-5" id="startBtn">Start Quiz</button>
+
+        </div>
+
+        <div class="screen" id="quiz-screen">
+            <div class="quizHeader">
+                <h2 class="quizTitle">Test Your Skills On HTML</h2>
+                <div class="quizInfo d-flex justify-content-around align-items-center mb-3">
+                    <p>
+                        Question <span id="currentQuestion">1</span>
+                        of <span id="numOfQuestion">10</span>
+                    </p>
+                    <p>
+                        Score : <span id="Score">0</span>
+                    </p>
+                </div>
+
+                <div class="d-flex justify-content-around align-items-center mb-3">
+                    <p>Question Time: <span id="questionTimer">30</span>s</p>
+                    <p>Total Time: <span id="totalTimer">0</span>s</p>
+                </div>
+                <button class="btn btn-secondary mb-3" id="backToTopicsBtn">Back to Topics</button>
+
+                <div class="answersContainer">
+                    </div>
+
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Quiz Result</h1>
+            <div class="resultInfo">
+                <p>You Scored <span id="finalScore">0</span> out of <span id="maxScore">10</span></p>
+                <p class="resultMessage">Good job</p>
+            </div>
+            <button class="mainBtn px-6 mt-2 fs-6">Restart</button>
+        </div>
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
